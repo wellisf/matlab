@@ -1,9 +1,5 @@
 function distance = cosseno(p,q)
 
-%% have to conclude  teste
-
-pn = p/3;
-qn= q/3;
 column = size(p,2);
 
 n = 0;  % somatorio(pn * qn)
@@ -12,10 +8,10 @@ dy = 0; % ((somatorio(qn²))^0,5)
 
 for i = 1 : column 
    
-    n = ( pn(i) * qn(i) ) + n;
+    n = ( p(i) * q(i) ) + n;
     
-    dx = (pn(i)^2) + dx;
-    dy = (qn(i)^2) + dy;
+    dx = (p(i)^2) + dx;
+    dy = (q(i)^2) + dy;
     
 end
 
@@ -32,4 +28,4 @@ else
     dy = n/dx;
 end
 
-distance = (1 - dy);
+distance = (dy);
